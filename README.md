@@ -1,7 +1,7 @@
 # INSTALLATION GUIDE
-**1.** Unzip the `cd_drawtextui.zip` folder.
+**1.** Clone the repository or Code > Download zip
  
-**2.** Add the resource to your server start config: `ensure cd_drawtextui`. The name of the folder must not be changed or the resource will not function correctly.
+**2.** Add the resource to your server start config: `ensure cd_drawtextui`. The name of the folder must be `cd_drawtextui` or the resource will not function correctly.
 
 ## How to use?
 This can be triggered from the server or client. A more advanced example is posted below.
