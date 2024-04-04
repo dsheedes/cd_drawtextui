@@ -1,14 +1,22 @@
-RegisterNetEvent('cd_drawtextui:ShowUI')
-AddEventHandler('cd_drawtextui:ShowUI', function(action, text)
-	SendNUIMessage({
+function showTextUI(action, text)
+        SendNUIMessage({
 		action = action,
 		text = text,
 	})
-end)
+end
 
-RegisterNetEvent('cd_drawtextui:HideUI')
-AddEventHandler('cd_drawtextui:HideUI', function()
+function hideTextUI()
 	SendNUIMessage({
 		action = 'hide'
 	})
-end)
+end
+
+RegisterNetEvent('cd_drawtextui:ShowUI')
+AddEventHandler('cd_drawtextui:ShowUI', showTextUI)
+
+exports('showUI', showTextUI)
+
+RegisterNetEvent('cd_drawtextui:HideUI')
+AddEventHandler('cd_drawtextui:HideUI', hideTextUI)
+
+exports('hideUI', hideTextUI)
